@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>CamaiRideWeb</title>
+
+    </head>
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+        }
+    </style>
+
+    <body>
+        <h1 style="text-align:center">LlevaCamai</h1>
+
+        <p>Hola, bienvenido a <strong>LlevaCamai</strong> Aquí puedes registrarte para darle ride a Camila Gonzalez (Camai)</p>
+
+        <h3>Cosas importantes</h3>
+
+        <ul>
+            <li>18 años</li>
+            <li>Cumbres</li>
+            <li>Kpop</li>
+            <li>Ocupa Ride</li>
+        </ul>
+
+
+        <h3>Reglas</h3>
+
+        <ul>
+            <li>Camai debe ir en el asiento de copiloto</li>
+            <li>Se debe poner Kpop durante todo el viaje</li>
+            <li>No se puede hablar</li>
+            <li>No la puedes ver a los ojos</li>
+        </ul>
+
+        <img 
+        width="200" 
+        heught="200"
+        alt = "Perdon si la imagen no carga, no se programar"
+        src="/imagenes/Unknown.jpeg" />
+
+        <h3>En que fecha y hora le quieres dar ride</h3>
+        <input type ="datetime-local">
+
+        <h3>Dime tu nombre</h3>
+        <form id="nameForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <br>
+            <br>
+            <button type="button" onclick="displayName()">Registrarse</button>
+        </form>
+    
+        <div id="result"></div>
+    
+        <script>
+            function displayName() {
+                var enteredName = document.getElementById("name").value;
+                document.getElementById("result").innerHTML = "<h2>Muchas felicidades " + enteredName + " quedaste registrad@ para darle ride de camai.</h2>";
+            }
+        </script>
+
+    </body>
+
+</html>
