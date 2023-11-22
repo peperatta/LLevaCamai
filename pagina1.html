@@ -10,17 +10,18 @@
     
     <style>
         body {
-            font-family: Arial, sans-serif;
+            background-color: #60bae7;
+            font-family: Script, sans-serif;
             margin: 40px;
         }
     </style>
 
     <body>
-        <h1 style="text-align:center">LlevaCamai</h1>
+        <h1 style="text-align:center; color:rgb(236, 240, 242)">CamaiRide</h1>
 
-        <p>Hola, bienvenido a <strong>LlevaCamai</strong> Aquí puedes registrarte para darle ride a Camila Gonzalez (Camai)</p>
+        <p>Hola, bienvenido a <strong>CamaiRide</strong>. Aquí puedes registrarte para darle ride a Camila Gonzalez.</p>
 
-        <h3>Cosas importantes</h3>
+        <h3 style="color:rgb(236, 240, 242)"> Cosas importantes</h3>
 
         <ul>
             <li>18 años</li>
@@ -30,7 +31,7 @@
         </ul>
 
 
-        <h3>Reglas</h3>
+        <h3 style="color:rgb(236, 240, 242)">Reglas</h3>
 
         <ul>
             <li>Camai debe ir en el asiento de copiloto</li>
@@ -39,31 +40,31 @@
             <li>No la puedes ver a los ojos</li>
         </ul>
 
-        <img 
-        width="200" 
-        heught="200"
-        alt = "Perdon si la imagen no carga, no se programar"
-        src="/imagenes/Unknown.jpeg" />
+        <h3 style="text-align:center; color:rgb(236, 240, 242)">En que fecha y hora le quieres dar ride</h3>
 
-        <h3>En que fecha y hora le quieres dar ride</h3>
-        <input type ="datetime-local">
+        <input style="text-align:center" type ="datetime-local">
 
-        <h3>Dime tu nombre</h3>
-        <form id="nameForm">
-            <label for="name">Name:</label>
+        <h3 style="text-align:center; color:rgb(236, 240, 242)">Dame tu nombre y correo </h3>
+        
+        <form id="nameForm" onsubmit="registerUser(); return false;">
+            <label for="name">Nombre:</label>
             <input type="text" id="name" name="name" required>
             <br>
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" name="email" required>
             <br>
-            <button type="button" onclick="displayName()">Registrarse</button>
+            <br>
+            <button type="submit">Registrarse</button>
         </form>
-    
-        <div id="result"></div>
+
+    <div id="result"></div>
     
         <script>
-            function displayName() {
+            function registerUser() {
                 var enteredName = document.getElementById("name").value;
-                document.getElementById("result").innerHTML = "<h2>Muchas felicidades " + enteredName + " quedaste registrad@ para darle ride de camai.</h2>";
-            }
+                var enteredEmail = document.getElementById("email").value
+                document.getElementById("result").innerHTML = "<h2>Muchas felicidades " + enteredName + ", quedaste registrado para darle ride de Camai. Te enviaremos tus resultados a " + enteredEmail + ".</h2>";
+             }     
         </script>
 
     </body>
